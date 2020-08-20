@@ -12,17 +12,6 @@
             image1.height = "150"
         }
     </script>
-    <script>
-        function chg() {
-            if (document.getElementById("sel").value == "txt") {
-                document.getElementById("txt").style.display = "";
-                document.getElementById("btn").style.display = "none";
-            } else {
-                document.getElementById("txt").style.display = "none";
-                document.getElementById("btn").style.display = "";
-            }
-        }
-    </script>
 </head>
 
 <body>
@@ -64,8 +53,8 @@
             <br>
             <button id="button1" onclick="location.href='http://www.baidu.com/'" type="button"> 百度 </button><br>
             <br>
-            <select id="sel" onChange="chg()">
-                <option value="txt">txt</option>
+            <select id="sel">
+                <option value="txt" label="222">txt</option>
                 <option value="btn">btn</option>
             </select>
         </fieldset>
