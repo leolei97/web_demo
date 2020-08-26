@@ -11,6 +11,28 @@
         function dropImage1() {
             image1.height = "150"
         }
+        function myAlert(){
+            alert("你好，我是一个警告框！");
+        }
+        function myConfirm(){
+            var x;
+            var r=confirm("按下按钮!");
+            if (r==true){
+                x="你按下了\"确定\"按钮!";
+                }
+            else{
+                x="你按下了\"取消\"按钮!";
+                }
+            document.getElementById("demo").innerHTML=x;
+        }
+        function myPrompt(){
+            var x;
+            var person=prompt("请输入你的名字");
+            if (person!=null && person!=""){
+                x="你好 " + person + "! 今天感觉如何?";
+                document.getElementById("demo").innerHTML=x;
+            }
+        }
     </script>
 </head>
 
@@ -36,9 +58,6 @@
                 <option id="option13" value="num3" label="num33">333</option>
                 <option id="option14" value="num4" label="num44">444</option>
             </select>
-            <span>
-                <<<<++++>>>>
-            </span>
             <select id="select222" multiple="true" name="letter222">
                 <option id="option21" value="let1">AAA</option>
                 <option id="option22" value="let2">BBB</option>
@@ -85,6 +104,12 @@
     <img src="./img/img2.jpg" height="100" class="sss" name="image1" ondblclick="enlargeImage1()"
         style="cursor:pointer;"><br>
     <br>
+    <br>
+    <input class="alert" type="button" onclick="myAlert()" value="myAlert" /><br>
+    <br>
+    <button class="confirm" onclick="myConfirm()">myConfirm</button><br>
+    <br>
+    <button class="prompt" onclick="myPrompt()">myPrompt</button><br>
     <br>
 </body>
 
